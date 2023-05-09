@@ -1,0 +1,11 @@
+//convert deg c to deg f
+#include<iostream>
+using namespace std;
+int main()
+{	
+	int c,f=0;
+	cout<<"Enter c \n";
+	cin>>c;
+	f=(c*9/5)+32;
+	cout<<"The f value is: "<<f;
+}
