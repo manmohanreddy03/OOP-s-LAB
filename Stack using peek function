@@ -1,0 +1,81 @@
+//Stack using c++
+#include<iostream>
+using namespace std;
+#define s 5
+class stackpeek
+{
+	int st[s];
+	int tos;
+	public:
+	void intt();
+	void push(int);
+	int pop();
+	int peek();
+	void display();
+};
+void stackpeek::intt()
+{
+	tos=0;
+}
+void stackpeek::push(int i)
+{
+	
+	if(tos==s)
+	{
+		cout<<"Stack full";
+	}
+	else
+	{
+		st[tos]=i;
+		tos++;
+	}
+}
+int stackpeek::pop()
+{
+	if(tos==0)
+	{
+		cout<<"Stack underflow";
+		return 1;
+	}
+	tos--;
+	cout<<"Poppped element"<<st[tos];
+	return 0;
+}
+int stackpeek::peek()
+{
+	if(tos==0)
+	{
+		cout<<"Stack underflow";
+		return 0;
+	}
+	else
+	{
+		cout<<"Peek element is "<<st[tos-1]<<"\n";
+		return 0;
+	}
+}
+void stackpeek::display()
+{
+	if(tos==0)
+	{
+		cout<<"stack is empty";
+		return;
+	}
+	else
+	{
+		for(int i=0;i<tos;i++)
+		{
+			cout<<st[i]<<"\t";
+		}
+	}
+}
+int main()
+{
+	stackpeek a;
+	a.intt();
+	a.push(10);
+	a.push(11);
+	a.pop();
+	a.peek();
+	
+}
