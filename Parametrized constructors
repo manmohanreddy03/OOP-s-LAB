@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class wall
+{
+	private:
+	double length;
+	double height;
+	
+	public:
+	wall(double l,double h)
+	{
+		length=l;
+		height=h;
+	}
+	double calculate()
+	{
+		return length*height;
+	}
+};
+int main()
+{
+	wall w1(10.2,11);
+	wall w2(2,3.2);
+	cout<<"the value 1: "<<w1.calculate();
+	cout<<"The value 2: "<<w2.calculate();
+}
+
+	 
